@@ -5,10 +5,15 @@ def sum_multiplied_2(card):
     for i in str(numbers_with_step):
         count.append(int(i) * 2)
     count_str = ''.join(map(str, count))
-    print(count_str)
+    return count_str
 
+def sum_of_place_numbers(card):
+    place_nubmers = 0
+    for i in sum_multiplied_2(card):
+        place_nubmers += int(i)
+    print(place_nubmers)
 
-probe_1 = sum_multiplied_2(card = 4003600000000014)
+probe_1 = sum_of_place_numbers(card = 4003600000000014)
 
 
 
