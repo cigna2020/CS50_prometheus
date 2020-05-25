@@ -8,9 +8,6 @@ def sum_multiplied_2(card):
 
 probe_1 = sum_multiplied_2(card = 4003600000000014)
 
-#test_2
-
-
 
 
 
