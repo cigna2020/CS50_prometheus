@@ -5,9 +5,9 @@ def Mario():
             if 1 <= int(number) <= 8:
                 break
     for i in range(1, int(number) + 1):
-        print(' ' * (int(number) - i))
+        print(' ' * (int(number) - i), end='')
         print('#' * i, end='')
-        print(' ', end='')
+        print('  ', end='')
         print('#' * i)
 
 fun = Mario()
