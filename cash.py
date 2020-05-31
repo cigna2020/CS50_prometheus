@@ -1,18 +1,21 @@
+from math import floor
 from typing import List
 
 
 def cash():
-    change = input('Numbers ')
-    money: List[float] = [0.25, 0.10, 0.5, 0.1]
+    money = [25, 10, 50, 1]
     counter = 0
-    while True:
-        if change.isnumeric():
-            break
+    numb = input('Numbers ')
+    change = floor(float(numb) * 100)
+
     while float(change) > 0:
-        if float(change) >= float(money[0]):
-            change = float(change) - money[0]
+
+        i = 0
+        if float(change) >= float(money[i]):
+            change = float(change) - float(money[i])
             counter += 1
-            print(change, counter)
+        else: i += 1
+    print(counter)
 
 
 cash()
