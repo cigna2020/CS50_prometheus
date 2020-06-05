@@ -4,8 +4,12 @@ def clean_list(list):
     for i in list:
         if i not in new_list:
             new_list.append(i)
-    return new_list
+        if i in new_list:
+            if type(i) != type(new_list[new_list.index(i)]):
+                new_list.append(i)
+    # return new_list
+    print(new_list)
 
-clean_list([32, 32.1, 32.0, -123])
+clean_list([1, 1.0, '1', -1, 1])
 
 
