@@ -1,3 +1,5 @@
+import sys
+
 
 def clean_list(list):
     new_list = []
@@ -7,9 +9,10 @@ def clean_list(list):
         if i in new_list:
             if type(i) != type(new_list[new_list.index(i)]):
                 new_list.append(i)
-    # return new_list
-    print(new_list)
+    return new_list
 
-clean_list([1, 1.0, '1', -1, 1])
+
+check = list(sys.argv[1:])
+print(clean_list(check))
 
 
