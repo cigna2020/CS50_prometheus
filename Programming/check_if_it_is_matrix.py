@@ -29,3 +29,13 @@ def output_matrix(mat):
             string = string + "%4d" % (el)
         print(string)
 
+# v.4 виводить новий список який складається з відповідних елементів попереднього списку, тобто new_list = [[old_list[0][1], old_list[1][1]...]]
+
+def transpone(mat):
+    mat2 = []
+    for i in range(len(mat[0])):
+        for j in range(len(mat)):
+            if j==0:
+                mat2.append([])
+            mat2[i].append(mat[j][i])
+    print(mat2)
